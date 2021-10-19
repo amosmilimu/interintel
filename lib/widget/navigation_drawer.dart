@@ -35,25 +35,25 @@ class NavigationDrawerWidget extends StatelessWidget {
                 children: [
                   buildMenuItem(
                     text: 'Info',
-                    icon: Icons.people,
+                    icon: Icons.info,
                     onClicked: () => selectedItem(context, 0),
                   ),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'Design',
-                    icon: Icons.people,
+                    icon: Icons.design_services,
                     onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Response',
-                    icon: Icons.favorite_border,
+                    icon: Icons.feedback,
                     onClicked: () => selectedItem(context, 2),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Dictionary',
-                    icon: Icons.workspaces_outline,
+                    icon: Icons.book,
                     onClicked: () => selectedItem(context, 3),
                   ),
                   const SizedBox(height: 16),

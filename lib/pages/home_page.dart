@@ -11,24 +11,48 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-    drawer: NavigationDrawerWidget(),
-    // endDrawer: NavigationDrawerWidget(),
-    appBar: AppBar(
-      title: Text(MyApp.title),
-    ),
-    body: Builder(
-      builder: (context) => Container(
-        alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 32),
-        child: ButtonWidget(
-          icon: Icons.open_in_new,
-          text: 'Open Drawer',
-          onClicked: () {
-            Scaffold.of(context).openDrawer();
-            // Scaffold.of(context).openEndDrawer();
-          },
+        drawer: NavigationDrawerWidget(),
+        // endDrawer: NavigationDrawerWidget(),
+        appBar: AppBar(
+          title: Text(MyApp.title),
         ),
-      ),
-    ),
-  );
+        body: Builder(
+          builder: (context) => Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(horizontal: 32),
+            child: Column(
+              children: [
+                TextField(
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Enter a search term'),
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Enter a search term'),
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Enter a search term'),
+                ),
+                TextField(
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Enter a search term'),
+                ),
+                ButtonWidget(
+                  icon: Icons.open_in_new,
+                  text: 'Open Drawer',
+                  onClicked: () {
+                    Scaffold.of(context).openDrawer();
+                    // Scaffold.of(context).openEndDrawer();
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
 }
