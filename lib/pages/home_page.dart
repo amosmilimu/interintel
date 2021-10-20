@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interintel/main.dart';
+import 'package:interintel/pages/design_page.dart';
 import 'package:interintel/widget/button_widget.dart';
 import 'package:interintel/widget/navigation_drawer.dart';
 
@@ -19,35 +20,37 @@ class _HomePageState extends State<HomePage> {
         body: Builder(
           builder: (context) => Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(horizontal: 32),
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: Column(
               children: [
+                const SizedBox(height: 16),
                 TextField(
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'Enter a search term'),
+                      hintText: 'Name'),
                 ),
+                const SizedBox(height: 16),
                 TextField(
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'Enter a search term'),
+                      hintText: 'Email'),
                 ),
+                const SizedBox(height: 16),
                 TextField(
                   decoration: const InputDecoration(
                       border: OutlineInputBorder(),
-                      hintText: 'Enter a search term'),
+                      hintText: 'Phone Number'),
                 ),
-                TextField(
-                  decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText: 'Enter a search term'),
-                ),
+                const SizedBox(height: 16),
                 ButtonWidget(
                   icon: Icons.open_in_new,
                   text: 'Open Drawer',
                   onClicked: () {
-                    Scaffold.of(context).openDrawer();
-                    // Scaffold.of(context).openEndDrawer();
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(
+                        builder: (context)=>DesignPage(name:'Amos',
+                          email: 'amos@gmail.com',
+                          phone: 0,)));
                   },
                 ),
               ],

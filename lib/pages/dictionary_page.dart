@@ -47,6 +47,8 @@ class _DictionaryPageState extends State<DictionaryPage> {
         centerTitle: true
     ),
     body: Container(
+      alignment: Alignment.center,
+      padding: EdgeInsets.symmetric(horizontal: 8),
       child: ListView.builder(
         itemCount: newDict.length,
         itemBuilder: (BuildContext context, int index) {
@@ -54,9 +56,12 @@ class _DictionaryPageState extends State<DictionaryPage> {
           String values = newDict.values.elementAt(index);
           return new Column(
             children: <Widget>[
-              new ListTile(
-                title: new Text("$key"),
-                subtitle: new Text("$values"),
+              Card(
+                elevation: 1.0,
+                child: new ListTile(
+                  title: new Text("$key"),
+                  subtitle: new Text("$values"),
+                ),
               ),
               new Divider(
                 height: 2.0,

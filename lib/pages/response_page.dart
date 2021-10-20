@@ -23,23 +23,34 @@ class _ResponsePageState extends State<ResponsePage> {
         ),
 
         body: Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 8),
           child: FutureBuilder(
             builder: (context, AsyncSnapshot snapshot) {
               if (!snapshot.hasData) {
-                //print('project snapshot data is: ${projectSnap.data}');
                 return Container();
               }
               return ListView.builder(
                 itemCount: snapshot.data.length,
                 itemBuilder: (context, index) {
                   Todos todo = snapshot.data[index];
-                  return Column(
+                  return new Column(
                     children: <Widget>[
-                      Text(todo.title)
+                      Card(
+                        child: new ListTile(
+                          title: new Text(todo.title),
+                          subtitle: new Text(todo.completed.toString()),
+                        ),
+                        elevation: 1.0,
+                      ),
+                      new Divider(
+                        height: 2.0,
+                      ),
                     ],
                   );
                 },
               );
+
             },
             future: getTodos(),
           ),
