@@ -12,3 +12,7 @@ SnackBar getSnackBar(String message,bool error) {
   );
 
 }
+
+bool getOrientation(BuildContext context){
+  return  MediaQuery.of(context).orientation == Orientation.portrait;
+}
