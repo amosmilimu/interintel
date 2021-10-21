@@ -29,7 +29,9 @@ class _HomePageState extends State<HomePage> {
         body: Builder(
           builder: (context) => Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(
+                    context).size.width/30),
             child: Column(
               children: [
                 const SizedBox(height: 16),
