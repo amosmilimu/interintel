@@ -91,12 +91,6 @@ class NavigationDrawerWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Spacer(),
-              CircleAvatar(
-                radius: 24,
-                backgroundColor: Color.fromRGBO(30, 60, 168, 1),
-                child: Icon(Icons.add_comment_outlined, color: Colors.white),
-              )
             ],
           ),
         ),

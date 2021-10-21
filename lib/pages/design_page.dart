@@ -52,7 +52,7 @@ class DesignPage extends StatelessWidget {
                               children: [
                                 Icon(Icons.mail),
                                 const SizedBox(width: 5),
-                                Text("$email",style: body2(),),
+                                Flexible(child: Text("$email",style: body2(),)),
                               ],
                             ),
                             const SizedBox(height: 16),
@@ -77,12 +77,11 @@ class DesignPage extends StatelessWidget {
                       const SizedBox(height: 6),
                       Text("About",style: heading1(),),
                       const SizedBox(height: 6),
-                      Text("John Does is a fictitious name used in legal proceedings "
-                          "for a male party whose true name is not known. Compare Jane "
-                          "Doe, Richard Roe. of or for an unknown person; using the name "
-                          "John Doe to stand for an unknown person: The judge issued a John "
-                          "Doe warrant so the police could arrest the culprit when they "
-                          "identified him"),
+                      Text("These are the details of $name a holder of "
+                          "email address $email and phone number"
+                          "$phone. These details are public and anyone can see them,"
+                          "However, kindly consider that the details are personal and that"
+                          " how you use them can affect the user."),
                       const SizedBox(height: 16),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
