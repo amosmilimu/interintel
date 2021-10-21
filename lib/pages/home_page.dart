@@ -43,14 +43,14 @@ class _HomePageState extends State<HomePage> {
                 ),
                 const SizedBox(height: 16),
                 ButtonWidget(
-                  icon: Icons.open_in_new,
-                  text: 'Open Drawer',
+                  icon: Icons.keyboard_return,
+                  text: 'Submit',
                   onClicked: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(
                         builder: (context)=>DesignPage(name:'Amos',
                           email: 'amos@gmail.com',
-                          phone: 0,)));
+                          phone: '0743970626',)));
                   },
                 ),
               ],

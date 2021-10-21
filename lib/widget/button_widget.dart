@@ -24,12 +24,12 @@ class ButtonWidget extends StatelessWidget {
   Widget buildContent() => Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 28),
-          SizedBox(width: 16),
           Text(
             text,
             style: TextStyle(fontSize: 22, color: Colors.white),
           ),
+          SizedBox(width: 16),
+          Icon(icon, size: 28),
         ],
       );
 }

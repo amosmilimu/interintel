@@ -38,8 +38,8 @@ class _ResponsePageState extends State<ResponsePage> {
                     children: <Widget>[
                       Card(
                         child: new ListTile(
-                          title: new Text(todo.title),
-                          subtitle: new Text(todo.completed.toString()),
+                          title: new Text("Title: ${todo.title}"),
+                          subtitle: new Text("Completed: ${todo.completed.toString()}"),
                         ),
                         elevation: 1.0,
                       ),

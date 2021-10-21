@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:interintel/pages/dictionary_page.dart';
 import 'package:interintel/pages/response_page.dart';
 import 'package:interintel/pages/design_page.dart';
-import 'package:interintel/pages/user_page.dart';
+import 'package:interintel/utils/constants.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -11,7 +11,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     final name = 'John Doe';
     final email = 'john.doe@gmail.com';
     final urlImage =
-        'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60';
+        image;
 
     return Drawer(
       child: Material(
@@ -23,10 +23,7 @@ class NavigationDrawerWidget extends StatelessWidget {
               name: name,
               email: email,
               onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => UserPage(
-                  name: 'John Doe',
-                  urlImage: urlImage,
-                ),
+                builder: (context) => DesignPage(name: 'John Doe',email: 'johndoe@gmail.com',phone: "0123456789",),
               )),
             ),
             Container(
@@ -127,7 +124,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => DesignPage(name: '',email: '',phone: 0,),
+          builder: (context) => DesignPage(name: 'John Doe',email: 'johndoe@gmail.com',phone: "0123456789",),
         ));
         break;
       case 2:
